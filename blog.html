@@ -1,352 +1,145 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공덕 노래방 블로그 | 찐 내돈내산 후기</title>
-    <meta name="description" content="공덕 노래방 진짜 내돈내산 후기. 하루 3만원으로 3시간? 가성비 깡패 인정. 지하철역 5분, 24시, 무료팝콘까지. bro가 전하는 까칠한 후기">
-    <meta name="keywords" content="공덕 노래방, 공덕 노래방 내돈내산, 공덕 노래방 추천, 공덕 가성비 노래방, 공덕 24시 노래방, 공덕 블로그">
-    <meta name="author" content="t3b05-gd-kb-real-2">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b05-gd-kb-real-2.vercel.app/blog">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="공덕 노래방 내돈내산 | 깡패 같은 가성비 ㄹㅇ 후기">
-    <meta property="og:description" content="공덕 노래방 진짜 내돈내산 후기. 하루 3만원으로 3시간? 가성비 깡패 인정. 무료팝콘에 24시 운영까지, bro가 까발리는 찐 후기">
-    <meta property="og:image" content="https://t3b05-gd-kb-real-2.vercel.app/og-image.jpg">
-    <meta property="og:url" content="https://t3b05-gd-kb-real-2.vercel.app/blog">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="공덕 노래방 내돈내산 | 깡패 같은 가성비 ㄹㅇ 후기">
-    <meta name="twitter:description" content="공덕 노래방 진짜 내돈내산 후기. 하루 3만원으로 3시간? 가성비 깡패 인정. 무료팝콘에 24시 운영까지, bro가 까발리는 찐 후기">
-    <meta name="twitter:image" content="https://t3b05-gd-kb-real-2.vercel.app/og-image.jpg">
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: #0d0d0d;
-            color: #e0e0e0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* === TYPOGRAPHY (raw & oversized) === */
-        h1 {
-            font-size: clamp(2.2rem, 8vw, 4.5rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.04em;
-            line-height: 0.95;
-            color: #f2f2f2;
-        }
-        h2 {
-            font-size: clamp(1.6rem, 5vw, 2.8rem);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            color: #f2f2f2;
-            border-left: 6px solid #ff3366;
-            padding-left: 0.6rem;
-            margin: 2.5rem 0 1.5rem;
-        }
-        h3 {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 600;
-            text-transform: none;
-            letter-spacing: 0;
-            color: #ff3366;
-            margin: 2rem 0 1rem;
-        }
-        p, li, blockquote {
-            font-size: clamp(1rem, 2vw, 1.15rem);
-            font-weight: 300;
-            color: #cccccc;
-        }
-        a {
-            color: #ff3366;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.2s ease;
-        }
-        a:hover {
-            color: #ff6699;
-            text-decoration: none;
-        }
-        strong {
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        /* === LAYOUT: full bleed, asymmetric === */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* === NAVIGATION (street brutalist, hamburger) === */
-        nav {
-            background: #1a1a1a;
-            border-bottom: 2px solid #ff3366;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 0.75rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        nav .logo {
-            font-size: 1.4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -0.03em;
-            color: #f2f2f2;
-            text-decoration: none;
-            background: none;
-        }
-        nav .logo:hover {
-            color: #ff3366;
-        }
-        nav .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        nav .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #cccccc;
-            text-decoration: none;
-            padding: 0.25rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s ease;
-        }
-        nav .nav-links a:hover {
-            color: #ff3366;
-            border-bottom-color: #ff3366;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: #f2f2f2;
-            transition: 0.3s ease;
-        }
-        .tel-link {
-            display: inline-block;
-            background: #ff3366;
-            color: #0d0d0d !important;
-            font-weight: 700;
-            padding: 0.4rem 1.2rem;
-            border-radius: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: background 0.2s ease;
-        }
-        .tel-link:hover {
-            background: #ff6699;
-            color: #0d0d0d !important;
-        }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            nav .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #1a1a1a;
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1rem;
-                border-bottom: 2px solid #ff3366;
-            }
-            nav .nav-links.open {
-                display: flex;
-            }
-            nav .nav-links a {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* === BLOG ARTICLE SPECIFIC === */
-        .blog-hero {
-            padding: 3rem 0 1rem;
-            border-bottom: 1px solid #2a2a2a;
-        }
-        .blog-hero .meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.85rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
-        }
-        .blog-hero h1 {
-            margin-bottom: 1rem;
-        }
-        .blog-hero .subhead {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            font-weight: 300;
-            color: #aaa;
-            max-width: 680px;
-        }
-        .blog-body {
-            padding: 2rem 0 4rem;
-        }
-        .blog-body p {
-            margin-bottom: 1.5rem;
-            max-width: 720px;
-        }
-        .blog-body blockquote {
-            margin: 2rem 0;
-            padding: 1.2rem 1.5rem;
-            background: #1a1a1a;
-            border-left: 6px solid #ff3366;
-            font-style: italic;
-            color: #e0e0e0;
-            font-weight: 400;
-        }
-        .blog-body ul {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-            list-style: none;
-        }
-        .blog-body ul li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.2rem;
-        }
-        .blog-body ul li::before {
-            content: '>';
-            color: #ff3366;
-            font-weight: 700;
-            position: absolute;
-            left: 0;
-        }
-        .cta-box {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-        .cta-box p {
-            margin: 0;
-            font-weight: 500;
-            font-size: 1.1rem;
-            color: #f2f2f2;
-        }
-        .cta-box .tel-link {
-            font-size: 1.2rem;
-            padding: 0.6rem 2rem;
-        }
-
-        /* === FOOTER === */
-        footer {
-            background: #1a1a1a;
-            border-top: 2px solid #ff3366;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #666;
-        }
-        footer a {
-            color: #ff3366;
-        }
-
-        /* === RESPONSIVE TWEAKS === */
-        @media (max-width: 768px) {
-            .blog-hero .meta {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-            }
-            .cta-box {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>공덕 노래방 내돈내산 블로그</title>
+<meta name="description" content="공덕 노래방 내돈내산에 처음 방문하는 고객을 위해, 이용 전 확인해야 할 기준과 상황별 적합성을 상세히 안내합니다. 예약, 인원 규모, 이용 목적에 따른 팁을 제공해 혼란을 최소화하고 현명한 선택을 돕습니다.">
+<meta name="keywords" content="공덕 노래방, 내돈내산, 노래방 이용 가이드, 공덕 방 karaoke, 초보자 팁">
+<link rel="canonical" href="https://gongdeok-room-guide.link-hub.org/blog.html">
+<meta property="og:title" content="공덕 노래방 내돈내산 — 선택 가이드">
+<meta property="og:description" content="처음 방문하는 사람들을 위한 공덕 노래방 내돈내산 이용 전 체크리스트와 상황별 추천 정보를 제공합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gongdeok-room-guide.link-hub.org/blog.html">
+<meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=공덕+노래방+가이드">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">공덕노래방</a>
-        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="/">홈</a></li>
-            <li><a href="/blog">블로그</a></li>
-            <li><a href="/review">리뷰</a></li>
-            <li><a href="/about">소개</a></li>
-            <li><a href="tel:01062790862" class="tel-link">010-6279-0862</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <div class="container">
-            <section class="blog-hero">
-                <div class="meta">
-                    <span>내돈내산 찐후기</span>
-                    <span>2025.04</span>
-                    <span>by bro</span>
-                </div>
-                <h1>공덕 노래방 가성비 깡패<br>3만원에 3시간?</h1>
-                <p class="subhead">진짜 내 돈 내고 갔다. 거짓말 안 한다. 이 가격에 이 퀄리티면 인정할 수밖에 없다. bro의 까칠한 후기 시작한다.</p>
-            </section>
+<!-- Nav (공통) -->
+<nav class="n-side-y2t6">
+  <ul class="k-list-u8xb">
+    <li><a href="/home">홈</a></li>
+    <li><a href="/guide">이용 가이드</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/contact">문의</a></li>
+  </ul>
+</nav>
 
-            <article class="blog-body">
-                <p>먼저 결론부터 말한다. <strong>공덕 노래방, 가성비로 따지면 공덕에서 발톱 때기 힘들다.</strong> 3만원 내면 3시간. 코인노래방도 아닌데 이게 된다고? 나도 반신반의하면서 갔다. 근데 됐다. 심지어 더 했다.</p>
+<main class="v-box-ep5a">
 
-                <p>위치는 <strong>공덕역 4번 출구에서 도보 5분.</strong> 딱 지하철 내려서 걸어오기 좋은 거리다. 비 오는 날도 편하게 올 수 있는 동선. 건물 간판도 크게 붙어있어서 찾는 데 1분도 안 걸렸다. <strong>간판에 '24시'라고 크게 쓰여있음.</strong> 밤새도 된다는 거다. 피곤하면 자고 일어나서 다시 불러도 됨.</p>
+  <!-- 서론 -->
+  <section>
+    <h1 class="m-txt-3286">공덕 노래방, 내돈내산을 위한 첫 발걸음</h1>
+    <p class="m-txt-3286">
+      공덕 지역에 새로 오픈한 노래방은 “내돈내산”이라는 키워드로 젊은 층에게 큰 관심을 받고 있다. 하지만 처음 방문하는 이들에게는 사전 체크리스트가 필수다. 좌석 배치, 방음 설비, 그리고 시간제 요금제가 어떻게 구성돼 있는지 정확히 알아야 불필요한 불편을 피할 수 있다.
+    </p>
+    <p class="m-txt-3286">
+      이 블로그에서는 공덕 노래방 내돈내산을 체험하려는 사람들을 위해, 예약 전부터 퇴실 후까지 고려해야 할 핵심 포인트를 상황별로 상세히 제시한다. “내돈내산”이라는 이름이 함축하는 ‘가성비’, ‘자체 관리’, ‘자유로운 사용’이라는 세 가지 축을 중심으로 이야기를 풀어간다.
+    </p>
+  </section>
 
-                <h3>들어가자마자 '어?' 소리 나옴</h3>
-                <p>로비부터 인테리어가 생각보다 깔끔했다. 공덕 쪽에 이런 곳이 있었나 싶을 정도. <strong>무료 팝콘 기계가 입구에 있음.</strong> 다른 데는 팝콘 주면 고마운 줄 알아라 하는 분위기인데, 여기는 무료임. 내가 직접 뽑아먹었다. 짭짤한 맛. 맥주랑 같이 먹으면 천국이다.</p>
+  <!-- 예약 체크리스트 -->
+  <section>
+    <h2 class="m-txt-3286">예약 전 반드시 확인할 4가지 체크포인트</h2>
+    <p class="m-txt-3286">
+      1) **시간제 vs. 전일제** – 내돈내산은 시간제 요금이 기본이지만, 대규모 파티나 장시간 연습을 계획한다면 전일제 패키지를 검토한다. 전일제는 비록 초기 비용이 높지만, 실제 사용 시간이 늘어날수록 평균 단가가 낮아진다.
+    </p>
+    <p class="m-txt-3286">
+      2) **인원 제한 및 방 규모** – 방당 최대 인원은 6~8명으로 제한된다. 사전 예약 시 인원 수를 정확히 입력하고, 방 크기가 충분한지 사진 혹은 레이아웃을 확인한다. 특히 어린이와 고령자를 동반할 경우, 휠체어 접근성 여부를 반드시 체크한다.
+    </p>
+    <p class="m-txt-3286">
+      3) **부가 서비스** – 마이크·스피커 외에도 개인 라이트, 음향 믹서, 심지어는 실시간 가사 싱크 기능까지 제공한다. 각 방마다 제공되는 부가 기능이 다를 수 있으니, 원하는 옵션이 포함된 방을 선택하도록 한다.
+    </p>
+    <p class="m-txt-3286">
+      4) **취소·환불 정책** – 내돈내산은 무리한 환불을 최소화하기 위해 24시간 전까지 전액 환불, 당일 취소는 50% 차감 정책을 적용한다. 예약 시점에 정책을 정확히 읽고, 가능하면 문자 혹은 이메일로 확인받는 것이 안전하다.
+    </p>
+  </section>
 
-                <p>방에 들어가서 가장 먼저 본 건 <strong>리모컨 상태.</strong> 거슬리는 건 싫어해서. 근데 깔끔했다. 버튼 다 살아있고, 마이크도 새 거처럼 깨끗. 음향도 조절 가능하고 에코도 셀프. <strong>무선 마이크 4개</strong>였나? 그 정도 있어서 친구랑 와도 전쟁 안 남.</p>
+  <!-- 상황별 이용 팁 -->
+  <section>
+    <h2 class="m-txt-3286">상황별 맞춤 이용 팁</h2>
 
-                <blockquote>
-                    "3만원 내고 3시간 노래하고 나오면서 팝콘까지 챙겨 먹는데, 이게 왜 안 망하는지 의문이 들 정도. 업주 형님 장사 잘되시길."
-                </blockquote>
+    <!-- 친목 파티 -->
+    <div class="v-box-ep5a">
+      <h3 class="m-txt-3286">친목 파티·단체 모임</h3>
+      <p class="m-txt-3286">
+        8인 이하의 소규모 모임이라면 기본 시간제 요금으로 충분히 즐길 수 있다. 이때는 방의 조명 색상을 미리 설정해 분위기를 조성하고, 사전에 음악 리스트를 공유해 모두가 원하는 곡을 미리 준비한다. 사전 예약 시 “단체 전용 방” 옵션을 선택하면 좌석 배열을 맞춤형으로 제공받을 수 있다.
+      </p>
+      <p class="m-txt-3286">
+        10명 이상이 모일 경우, 두 개 이상의 방을 연계하는 “연결 방” 옵션을 활용한다. 연결 방은 사운드가 겹치지 않도록 방음이 강화돼 있어, 동시에 여러 팀이 노래를 부를 수 있다. 이때는 인원당 평균 사용 시간을 측정해 최적의 시간제 요금을 산출하는 것이 비용 효율성을 높인다.
+      </p>
+    </div>
 
-                <h3>곡 수는? 신곡 업데이트?</h3>
-                <p>이게 제일 중요하지. <strong>TJ 미디어 반주기.</strong> 금영도 있음. 근데 TJ 위주로 썼다. 신곡은 그래도 밀리지 않게 업데이트되어 있었다. 아이브 최신 꺄!도 있었고, 에스파 드라마도 있었고. <strong>80년대~90년대 올드팝도 많아서</strong> 부모님 모시고 와도 괜찮을 듯. 나는 부흥회 분위기로 신나게 부르다 옴.</p>
+    <!-- 연습·학습 -->
+    <div class="v-box-ep5a">
+      <h3 class="m-txt-3286">보컬 연습·음악 학습</h3>
+      <p class="m-txt-3286">
+        개인 연습을 위해서는 방음 설비와 마이크 품질이 핵심이다. 내돈내산은 최신 디지털 마이크와 고음질 스피커를 기본 제공하므로, 레코딩 기능을 이용해 실시간 녹음 후 피드백을 받을 수 있다. 특히 “레코딩 모드”를 켜면 외부 소음 차단에 도움이 된다.
+      </p>
+      <p class="m-txt-3286">
+        장시간 연습을 계획한다면 전일제 패키지를 선택하고, “소음 차단 모드”와 “음량 자동 조절” 기능을 활성화한다. 이때는 사전에 방 내부 온도·환기 상황을 확인해 목소리 피로를 최소화한다. 또한, 연습 중간중간 물을 마시고 스트레칭을 함으로써 목 건강을 관리한다.
+      </p>
+    </div>
 
-                <p>음질도 괜찮았다. 고음에서 찢어지거나 울림이 심하지 않았음. 마이크도 민감해서 작게 불러도 잘 잡아줬다.
+    <!-- 행사·공연 -->
+    <div class="v-box-ep5a">
+      <h3 class="m-txt-3286">소규모 행사·공연</h3>
+      <p class="m-txt-3286">
+        소규모 발표회나 기업 이벤트에 노래방을 활용하면 비용 대비 효과가 뛰어나다. 무대 조명, 프로젝터, 마이크 믹서를 별도 대여할 수 있는 옵션이 제공되며, 사전 현장 점검을 통해 전기 용량 및 배선 안전을 확인한다. 행사 전에는 리허설을 최소 30분 이상 진행해 장비 오작동을 방지한다.
+      </p>
+      <p class="m-txt-3286">
+        행사 당일에는 담당 스태프가 현장에 상주해 장비 트러블슈팅을 즉시 지원한다. 또한, 관객 동선을 고려해 입구·출구 위치를 사전에 안내하고, 비상시 대피 경로를 숙지한다. 이러한 사전 대비가 행사의 원활한 진행을 보장한다.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2 class="m-txt-3286">자주 묻는 질문</h2>
+    <ul class="k-list-u8xb">
+      <li><a href="#faq1">예약은 어떻게 진행하나요?</a></li>
+      <li><a href="#faq2">시간제와 전일제 중 어떤 선택이 좋나요?</a></li>
+      <li><a href="#faq3">방음 설비는 어느 정도인가요?</a></li>
+      <li><a href="#faq4">취소 시 환불은 어떻게 되나요?</a></li>
+    </ul>
+
+    <h3 id="faq1" class="m-txt-3286">예약은 어떻게 진행하나요?</h3>
+    <p class="m-txt-3286">
+      공식 웹사이트에서 실시간 재고 확인 후 원하는 날짜·시간·방을 선택한다. 예약 단계에서 인원 수와 부가 옵션을 입력하고, 결제 단계에서 신용카드 혹은 모바일 결제로 즉시 확정된다. 예약이 완료되면 확인 문자와 함께 QR코드가 전송되어 현장 체크인 시 사용한다.
+    </p>
+
+    <h3 id="faq2" class="m-txt-3286">시간제와 전일제 중 어떤 선택이 좋나요?</h3>
+    <p class="m-txt-3286">
+      평균 이용 시간이 3시간 이하라면 시간제 요금이 경제적이다. 반대로 4시간 이상, 혹은 연속으로 여러 방을 이용하려는 경우 전일제 패키지가 단가를 크게 낮춘다. 특히, 대규모 파티나 연습 세션이 길어질 경우 전일제는 비용 대비 가장 효율적인 선택이 된다.
+    </p>
+
+    <h3 id="faq3" class="m-txt-3286">방음 설비는 어느 정도인가요?</h3>
+    <p class="m-txt-3286">
+      모든 방은 고밀도 방음 패널과 이중 유리창을 적용해 외부 소음 유출을 최소화한다. 마이크는 샤프한 고음역대까지 명료하게 포착하며, 스피커는 2.1채널 서라운드 사운드를 제공한다. 이 설비는 전문 스튜디오 수준에 근접해, 고품질 녹음과 실시간 퍼포먼스에 적합하다.
+    </p>
+
+    <h3 id="faq4" class="m-txt-3286">취소 시 환불은 어떻게 되나요?</h3>
+    <p class="m-txt-3286">
+      예약 24시간 전까지는 전액 환불이 가능하고, 당일 취소 시 50% 차감된 금액이 반환된다. 환불은 원 결제 수단으로 자동 처리되며, 문자로 확인받을 수 있다. 특별 이벤트나 할인 프로모션의 경우, 별도 환불 규정이 적용될 수 있으니 사전 확인이 필요하다.
+    </p>
+  </section>
+
+  <!-- 마무리 -->
+  <section>
+    <h2 class="m-txt-3286">마무리</h2>
+    <p class="m-txt-3286">
+      공덕 노래방 내돈내산은 “가성비·자유·품질”이라는 세 축을 토대로 설계된 복합 엔터테인먼트 공간이다. 위에서 제시한 체크리스트와 상황별 팁을 활용하면, 처음 방문하더라도 혼란 없이 만족스러운 경험을 만들 수 있다.
+    </p>
+    <p class="m-txt-3286">
+      아직 예약을 하지 않았다면, 공식 사이트에서 바로 예약하고 QR코드를 받아보자. 직접 체험한 후에는 자신의 사용 후기와 팁을 공유해, 내돈내산 커뮤니티를 더욱 풍성하게 만들자.
+    </p>
+  </section>
+
+</main>
+
+<footer class="v-box-ep5a">
+  <p class="m-txt-3286">© 2026 공덕 노래방 내돈내산 가이드. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
